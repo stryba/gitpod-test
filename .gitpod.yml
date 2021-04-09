@@ -11,8 +11,8 @@ ports:
 tasks:
   - before: > 
       npm install -g @angular/cli &&
-      cd ../frontend &&
-      npm install &&
+      cd frontend &&
+      npm install
   - name: Backend
     command: cd backend; ./mvnw spring-boot:run
   - name: Frontend
