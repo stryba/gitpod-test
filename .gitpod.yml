@@ -10,6 +10,7 @@ ports:
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - before: > 
+      export NG_CLI_ANALYTICS=off &&
       npm install -g @angular/cli > /dev/null &&
       cd frontend &&
       npm install &&
