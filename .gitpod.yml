@@ -12,8 +12,10 @@ tasks:
   - before: > 
       npm install -g @angular/cli > /dev/null &&
       cd frontend &&
-      npm install
+      npm install &&
+      cd ..
+    name: Frontend
+    command: cd frontend; ng serve --disable-host-check --proxy-config proxy.config.json --port=4200
   - name: Backend
     command: cd backend; ./mvnw spring-boot:run
-  - name: Frontend
-    command: cd frontend; ng serve --disable-host-check --proxy-config proxy.config.json --port=4200
+
