@@ -15,5 +15,7 @@ tasks:
       npm install &&
   - init: >
       cd backend && ./mvnw install
-  - command: cd backend; ./mvnw spring-boot:run
-  - command: cd frontend; ng serve --disable-host-check
+  - name: Backend
+    command: cd backend; ./mvnw spring-boot:run
+  - name: Frontend
+    command: cd frontend; ng serve --disable-host-check

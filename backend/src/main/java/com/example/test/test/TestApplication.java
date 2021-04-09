@@ -17,7 +17,7 @@ public class TestApplication {
 
 	@RequestMapping("/")
 	public String index() {
-		return "{\"x\": \"Test\"}";
+		return "{\"x\": \"The Backend is correctly connected!\"}";
 	}
 
 }
