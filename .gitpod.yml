@@ -9,12 +9,11 @@ ports:
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: > 
+  - before: > 
       npm install -g @angular/cli &&
       cd ../frontend &&
       npm install &&
-  - init: >
-      cd backend && ./mvnw install
+      cd ../backend && ./mvnw install
   - name: Backend
     command: cd backend; ./mvnw spring-boot:run
   - name: Frontend
