@@ -1,0 +1,19 @@
+image: gitpod/workspace-full
+
+# List the ports you want to expose and what to do when they are served. See https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 4200
+    onOpen: open-preview
+  - port: 8080
+    onOpen: ignore
+
+# List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - init: > 
+      npm install -g @angular/cli &&
+      cd ../frontend &&
+      npm install &&
+  - init: >
+      cd backend && ./mvnw install
+  - command: cd backend; ./mvnw spring-boot:run
+  - command: cd frontend; ng serve --disable-host-check
