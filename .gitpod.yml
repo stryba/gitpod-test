@@ -1,3 +1,4 @@
+
 image: gitpod/workspace-full
 
 # List the ports you want to expose and what to do when they are served. See https://www.gitpod.io/docs/config-ports/
@@ -20,3 +21,13 @@ tasks:
   - name: Backend
     command: cd backend; ./mvnw spring-boot:run
 
+
+vscode:
+  extensions:
+    - angular.ng-template
+    - redhat.fabric8-analytics
+    - redhat.java
+    - pivotal.vscode-spring-boot
+    - redhat.vscode-commons
+    - vscode.typescript
+    - vscode.typescript-language-features
